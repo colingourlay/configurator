@@ -7,7 +7,7 @@ import { useCoreState, updatePanel, Panels } from '../../state/core';
 /** @type {import('../../theme').ThemedCssProperties} */
 const styles = theme => ({
   button: {
-    color: 'rgba(0, 0, 0, 0.54)'
+    color: 'rgba(255, 255, 255, 1.0)'
   },
   leftIcon: {
     marginRight: theme.spacing(1),

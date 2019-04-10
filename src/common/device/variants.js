@@ -188,6 +188,21 @@ function buildDetailsList() {
     )
   ];
 
+  const gemini = [
+    variant(
+      variants.Standard,
+      [0, 1, 2, 3, 4, 5],
+      [
+        row`1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1`,
+        row`1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1`,
+        row`1.5 1 1 1 1 1 1 1 1 1 1 1 1 1.5 1 1 1 1v`,
+        row`1.75 1 1 1 1 1 1 1 1 1 1 1 2.25 1 1 1 `,
+        row`2.25 1 1 1 1 1 1 1 1 1 1 1.75 1 1 1 1 1v`,
+        row`1.25 1.25 1.25 6.25 1.5 1.5 1 1 1 1 1`
+      ]
+    )
+  ];
+
   return freezeMap(
     new Map([
       // [names.InfinityErgodox, edox],
@@ -195,7 +210,9 @@ function buildDetailsList() {
       [names.Infinity60Led, inf60Led],
       [names.WhiteFox, whitefox],
       [names.KType, ktype],
-      [names.Kira, kira]
+      [names.Kira, kira],
+      [names.GeminiDusk, gemini],
+      [names.GeminiDawn, gemini]
     ])
   );
 }

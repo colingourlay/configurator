@@ -17,7 +17,8 @@ const styles = theme => ({
   },
   active: {
     border: '1px solid black',
-    borderRightColor: theme.palette.background.default
+    borderRightColor: theme.palette.background.default,
+    backgroundColor: Palette.darkgray
   },
   inactive: {
     '&:hover': {
@@ -31,8 +32,7 @@ const styles = theme => ({
     width: 54,
     marginBottom: 10,
     padding: '5px 0',
-    borderRadius: '4px 0 0 4px',
-    color: Palette.darkgray
+    borderRadius: '4px 0 0 4px'
   }
 });
 
@@ -59,7 +59,15 @@ function SideTabs(props) {
         ))}
       </div>
       <div style={{ width: width + 2 + 2 * ui.backdropPadding, marginTop: 15 }}>
-        <div style={{ border: '1px solid black', marginLeft: 55, paddingLeft: 20, minHeight: 250 }}>
+        <div
+          style={{
+            border: '1px solid black',
+            marginLeft: 55,
+            paddingLeft: 20,
+            minHeight: 250,
+            backgroundColor: Palette.darkgray
+          }}
+        >
           {active.tab}
           <div style={{ clear: 'both', height: 14 }} />
         </div>

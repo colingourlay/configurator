@@ -11,7 +11,7 @@ import Led from './led';
 /** @type {import('../../theme').CssProperties} */
 const styles = {
   backdrop: {
-    backgroundColor: Palette.lightgray,
+    backgroundColor: Palette.darkgray,
     borderLeft: '1px solid transparent',
     borderRight: '1px solid transparent',
     borderBottom: '1px solid transparent'

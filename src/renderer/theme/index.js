@@ -18,8 +18,9 @@ export const fontStack = {
 
 /** @type {import('@material-ui/core/styles/createPalette').PaletteOptions} */
 const palette = {
-  primary: { main: '#0055AA', contrastText: '#F5F5F5' },
-  secondary: { main: '#5BB6E6', contrastText: '#263238' }
+  type: 'dark',
+  primary: { main: '#e41e26', contrastText: '#F5F5F5' },
+  secondary: { main: '#ed3f3f', contrastText: '#263238' }
 };
 
 /** @type {import('@material-ui/core/styles/createTypography').TypographyOptions} */

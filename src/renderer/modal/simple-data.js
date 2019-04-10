@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, Button, Modal, Typography } from '../mui';
 import { fontStack } from '../theme';
+import { Palette } from '../configure/styles';
 
 /** @type {import('../theme').ThemedCssProperties} */
 const styles = theme => ({
@@ -20,7 +21,8 @@ const styles = theme => ({
   dataContainer: {
     overflow: 'scroll',
     border: '1px solid gray',
-    marginTop: 10
+    marginTop: 10,
+    color: 'white'
   },
   data: {
     height: '100%',
@@ -33,6 +35,8 @@ const styles = theme => ({
   },
   text: {
     fontFamily: fontStack.monospace,
+    backgroundColor: Palette.darkgray,
+    color: 'white',
     fontSize: 'small',
     padding: 5,
     resize: 'none',

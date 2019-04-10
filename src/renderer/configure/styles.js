@@ -22,7 +22,7 @@ export const Palette = {
 };
 
 export const layerBg = [
-  Palette.silver,
+  Palette.lightgray,
   Palette.blue,
   Palette.green,
   Palette.orange,
@@ -32,14 +32,14 @@ export const layerBg = [
   Palette.red
 ];
 
-export const layerFg = [Palette.black, ...layerBg.slice(1)];
+export const layerFg = [Palette.white, ...layerBg.slice(1)];
 
 export function getLayerBg(layer) {
-  return layerBg[layer] || Palette.white;
+  return layerBg[layer] || Palette.black;
 }
 
 export function getLayerFg(layer) {
-  return layerFg[layer] || Palette.black;
+  return layerFg[layer] || Palette.white;
 }
 
 /** @type {import("../theme").CssProperties} */
@@ -50,14 +50,11 @@ export const capStyle = {
     boxSizing: 'content-box'
   },
   base: {
-    backgroundColor: Palette.gray,
-    border: '2px solid transparent',
-    borderRadius: 4,
     margin: 2
   },
   cap: {
     cursor: 'pointer',
-    backgroundColor: Palette.lightgray,
+    backgroundColor: '#555555', //Palette.lightgray,
     margin: 2,
     marginBottom: 4,
     display: 'flex',

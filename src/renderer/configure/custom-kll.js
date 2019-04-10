@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles, Typography } from '../mui';
 import { useConfigureState, updateCustomKll } from '../state/configure';
 import { fontStack } from '../theme';
+import { Palette } from './styles';
 
 /** @type {import('../theme').CssProperties} */
 const styles = {
@@ -19,6 +20,8 @@ const styles = {
     resize: 'vertical',
     fontFamily: fontStack.monospace,
     fontSize: 15,
+    color: '#fafafa',
+    backgroundColor: Palette.darkgray,
 
     '&:focus': {
       outline: 0

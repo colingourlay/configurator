@@ -16,7 +16,7 @@ import QuickKeyAssignDialog from './quick-key-assign-dialog';
 /** @type {import('../theme').CssProperties} */
 const styles = {
   backdrop: {
-    backgroundColor: Palette.silver,
+    backgroundColor: Palette.darkgray,
     borderLeft: '1px solid transparent',
     borderRight: '1px solid transparent',
     borderBottom: '1px solid transparent'
