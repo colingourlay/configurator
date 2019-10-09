@@ -84,18 +84,8 @@ function buildKeyboardList() {
       }
     },
     {
-      display: names.GeminiDusk,
-      names: ['GeminiDusk'],
-      variants: [variants.Standard],
-      visuals: true,
-      layouts: layouts([variants.Standard, ['Standard']]),
-      info: {
-        resetCombo: '"Right Ctrl + Right Alt + Esc"'
-      }
-    },
-    {
-      display: names.GeminiDawn,
-      names: ['GeminiDawn'],
+      display: names.GeminiDuskDawn,
+      names: ['GeminiDusk', 'GeminiDawn'],
       variants: [variants.Standard],
       visuals: true,
       layouts: layouts([variants.Standard, ['Standard']]),
@@ -146,10 +136,8 @@ function buildDeviceList() {
       [0x0011, false, [names.KType], variants.Standard],
       [0x0012, true, [names.Kira], variants.Standard],
       [0x0013, false, [names.Kira], variants.Standard],
-      [0x0014, true, [names.GeminiDusk], variants.Standard],
-      [0x0015, false, [names.GeminiDusk], variants.Standard],
-      [0x0014, true, [names.GeminiDawn], variants.Standard],
-      [0x0015, false, [names.GeminiDawn], variants.Standard]
+      [0x0014, true, [names.GeminiDuskDawn], variants.Standard],
+      [0x0015, false, [names.GeminiDuskDawn], variants.Standard]
     ]
   ];
 
@@ -180,8 +168,7 @@ export const names = Object.freeze({
   WhiteFox: 'WhiteFox',
   KType: 'K-Type',
   Kira: 'Kira',
-  GeminiDusk: 'Gemini Dusk',
-  GeminiDawn: 'Gemini Dawn'
+  GeminiDuskDawn: 'Gemini Dusk / Dawn'
 });
 
 export const variants = Object.freeze({
@@ -197,7 +184,7 @@ export const variants = Object.freeze({
   JackOfAllTrades: 'Jack of All Trades'
 });
 
-export const released = [names.GeminiDusk, names.GeminiDawn];
+export const released = [names.GeminiDuskDawn];
 
 export const keyboards = buildKeyboardList();
 

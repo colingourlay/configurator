@@ -17,7 +17,7 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(2),
-    height: 'calc(100vh - 48px)'
+    height: 'calc(100vh - 48px)',
     color: 'white'
   },
   topPad: {
