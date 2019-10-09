@@ -92,6 +92,15 @@ function buildKeyboardList() {
       info: {
         resetCombo: '"Right Ctrl + Right Alt + Esc"'
       }
+    },
+    {
+      display: names.GM107,
+      names: ['GM107'],
+      variants: [variants.Standard],
+      visuals: false,
+      non_programmable: true,
+      layouts: layouts([variants.Standard, ['Standard']]),
+      info: {}
     }
   ];
 }
@@ -137,7 +146,8 @@ function buildDeviceList() {
       [0x0012, true, [names.Kira], variants.Standard],
       [0x0013, false, [names.Kira], variants.Standard],
       [0x0014, true, [names.GeminiDuskDawn], variants.Standard],
-      [0x0015, false, [names.GeminiDuskDawn], variants.Standard]
+      [0x0015, false, [names.GeminiDuskDawn], variants.Standard],
+      [0x00ff, false, [names.GM107], variants.Standard]
     ]
   ];
 
@@ -168,7 +178,8 @@ export const names = Object.freeze({
   WhiteFox: 'WhiteFox',
   KType: 'K-Type',
   Kira: 'Kira',
-  GeminiDuskDawn: 'Gemini Dusk / Dawn'
+  GeminiDuskDawn: 'Gemini Dusk / Dawn',
+  GM107: 'Hexgears GM107'
 });
 
 export const variants = Object.freeze({
@@ -184,7 +195,7 @@ export const variants = Object.freeze({
   JackOfAllTrades: 'Jack of All Trades'
 });
 
-export const released = [names.GeminiDuskDawn];
+export const released = [names.GeminiDuskDawn, names.GM107];
 
 export const keyboards = buildKeyboardList();
 

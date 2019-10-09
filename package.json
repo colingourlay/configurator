@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.1.0",
-    "@material-ui/icons": "^4.1.0",
+    "@material-ui/icons": "^4.2.1",
     "@material-ui/lab": "^4.0.0-alpha.15",
     "@mdi/font": "^3.6.95",
     "bluebird": "^3.5.5",

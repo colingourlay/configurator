@@ -8,10 +8,12 @@ import {
   ToggleVisualsButton,
   ViewRawJsonButton,
   ImportKeymapButton,
-  LayoutHistoryButton
+  LayoutHistoryButton,
+  DownloadPackageButton
 } from './buttons';
 import ConfigureKeys from './configure-keys';
 import ConfigureVisuals from './configure-visuals';
+import { pathToImg } from '../common';
 
 /** @type {import('../theme').CssProperties} */
 const styles = {
@@ -43,6 +45,22 @@ function Configure(props) {
       </>
     );
   }, [executing]);
+
+  if (keyboard.keyboard.display == 'Hexgears GM107') {
+    return (
+      <>
+        <div className={classes.container}>
+          <DownloadPackageButton
+            text="Download firmware"
+            url="https://github.com/hexgears/Software/raw/master/Hexgears_Setup_V1.0.4.zip"
+          />
+          <div className={classes.imageContainer}>
+            <img className={classes.image} src={pathToImg('img/gm107.png')} />
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <div className={classes.root}>
