@@ -146,9 +146,12 @@ function buildDeviceList() {
       [0x0012, true, [names.Kira], variants.Standard],
       [0x0013, false, [names.Kira], variants.Standard],
       [0x0014, true, [names.GeminiDuskDawn], variants.Standard],
-      [0x0015, false, [names.GeminiDuskDawn], variants.Standard],
-      [0x00ff, false, [names.GM107], variants.Standard]
-    ]
+      [0x0015, false, [names.GeminiDuskDawn], variants.Standard]
+    ],
+    // Pre-release hexgears mouse
+    [0x0c45, [0x7668, false, [names.GM107], variants.Standard]],
+    // Production hexgears mouse
+    [0x0258, [0x1007, false, [names.GM107], variants.Standard]]
   ];
 
   // @ts-ignore
