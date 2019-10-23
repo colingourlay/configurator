@@ -1,0 +1,46 @@
+name: Electron CI
+
+on: [push]
+
+jobs:
+  build_linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10.16
+    - name: Install dependencies
+      run: |
+        yarn
+        yarn rebuild-deps
+    - name: Build app
+      run: yarn dist --publish onTagOrDraft
+
+  build_mac:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10.16
+    - name: Install dependencies
+      run: |
+        yarn
+        yarn rebuild-deps
+    - name: Build app
+      run: yarn dist --publish onTagOrDraft
+        
+  build_windows:
+    runs-on: windows-2016
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10.16
+    - name: Install dependencies
+      run: |
+        yarn
+        yarn rebuild-deps
+    - name: Build app
+      run: yarn dist --x64 --publish onTagOrDraft
