@@ -14,7 +14,9 @@ jobs:
       run: |
         yarn
         yarn rebuild-deps
-    - name: Build app
+    - name: Build and deploy app
+      env:
+        GH_TOKEN: c78877bd26f5c3a269cbf6dcdeb37bf64850650a
       run: yarn dist --publish onTagOrDraft
 
   build_mac:
@@ -28,7 +30,9 @@ jobs:
       run: |
         yarn
         yarn rebuild-deps
-    - name: Build app
+    - name: Build and deploy app
+      env:
+        GH_TOKEN: c78877bd26f5c3a269cbf6dcdeb37bf64850650a
       run: yarn dist --publish onTagOrDraft
         
   build_windows:
@@ -42,5 +46,7 @@ jobs:
       run: |
         yarn
         yarn rebuild-deps
-    - name: Build app
+    - name: Build and deploy app
+      env:
+        GH_TOKEN: c78877bd26f5c3a269cbf6dcdeb37bf64850650a
       run: yarn dist --x64 --publish onTagOrDraft
