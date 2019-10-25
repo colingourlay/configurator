@@ -1,6 +1,12 @@
-name: Electron CI
+name: Electron Release
 
-on: [push]
+on:
+  repository_dispatch:
+  release:
+    types: [created]
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build_linux:
